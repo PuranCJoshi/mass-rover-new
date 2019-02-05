@@ -1,4 +1,4 @@
-﻿using MassRover.Core.Contracts;
+using MassRover.Core.Contracts;
 using MassRover.Core.Model;
 
 namespace MassRover.Core
@@ -28,7 +28,7 @@ namespace MassRover.Core
         public virtual Position ExecuteCommand(Command command)
         {
             Position 
-                = _commandExecuter.Execute(Position, command);
+                = _commandExecuter.Execute(Position, command, _canvas);
 
             return Position;
         }
